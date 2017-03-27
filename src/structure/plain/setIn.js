@@ -9,7 +9,7 @@ const setInWithPath = (state, value, path, pathIndex) => {
   const next = setInWithPath(state && state[first], value, path, pathIndex + 1)
 
   if (!state) {
-    const initialized = isNaN(first) ? {} : []
+    const initialized = {}
     initialized[first] = next
     return initialized
   }
